@@ -1,14 +1,16 @@
-# Jurnal Umum Apps 
+# Journal App with Angular and Express + TypeScript + PostgreSQL
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
 
-Jurnal Umum Apps is a simple application that can be used for record your transaction. In this app, you just can create transaction for cash in and cash out, and to know the history of your transaction like date, debit, credit and balance. 
+Journal App is a simple application that can be used to record your transaction. In this app, you just can create transaction for cash in and cash out, and to know the history of your transaction like date, debit, credit and balance. 
 
 This app is still under development and maintenance, and will be updated as soon as possibele. But if you want to try this app or use for learning needs, you can clone this project and install the all requirements, and the app can running well at your machine.
 
  * App information:
-    - Name: `Jurnal Umum Apps`
-    - Version: `V0.1`
+    - Name: `Journal App`
+    - Version: `V0.2`
+
+    You could also see the previous version of this app here
 
 ## How To Clone
 
@@ -26,31 +28,10 @@ This app is still under development and maintenance, and will be updated as soon
 - The app will automatically reload if you change any of the source files.
 - Run `ng serve --watch --port 5000` if you want to run on a different port.
 
-## Json Server Configuration and Run
-
-- Enter to the project folder -> "jurnalumum-jsonserver" (inside angular project that you has been cloned before).
-- Run `npm install`.
-- Run `npm run start-auth --watch --port 5000`.
-
-### Project Composition:
+### Project Requirements:
   - Angular V11.1.4
   - TypeScript V4.1.2
   - Moment js
   - HTML2PDF
   - Fontawesome
-  - Json Server
   - Json Web Token
-
-<hr>
-
-### Screenshots
-
-<img src="./src/assets/github_assets/Dashboard.png" width="380" height="280"> | <img src="./src/assets/github_assets/List Jurnal.png" width="380" height="280">
-
-<img src="./src/assets/github_assets/List Transaction.png" width="380" height="280"> | <img src="./src/assets/github_assets/Form Add Transaction.png" width="380" height="280">
-
-<img src="./src/assets/github_assets/Form Edit Transaction.png" width="380" height="280"> | <img src="./src/assets/github_assets/Report Preview.png" width="380" height="280">
-
-<img src="./src/assets/github_assets/Report Pdf.png" width="380" height="280"> | <img src="./src/assets/github_assets/Login Page.png" width="380" height="280">
-
-<img src="./src/assets/github_assets/Register Page.png" width="380" height="280">
