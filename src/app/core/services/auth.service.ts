@@ -11,12 +11,12 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(email: string, password: string): Observable<any> {
+  login(username: string, password: string): Observable<any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-    return this.http.post(Api.LOGIN_URL, { email, password }, httpOptions);
+    return this.http.post(Api.LOGIN_URL, { username, password }, httpOptions);
   }
 }
