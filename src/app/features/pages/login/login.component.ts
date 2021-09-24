@@ -11,10 +11,8 @@ import { AuthService } from 'src/app/core/services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  form: any = {
-    username: '',
-    password: ''
-  }
+  username: string = '';
+  password: string = '';
 
   isLoggedIn = false;
   userInfo: string[] = [];
@@ -32,14 +30,13 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    const { username, password } = this.form;
+    const { username, password } = this;
 
     if (username !== '' && password !== '') {
       this.authService.login(username, password).subscribe(data => {
         this.isLoggedIn = true;
         this.token.saveToken(data.token);
         console.log(data);
-        console.log('Test login button');
         this.location.replaceState('/');
         window.location.reload();
       })
