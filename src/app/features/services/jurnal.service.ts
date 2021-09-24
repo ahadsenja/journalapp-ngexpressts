@@ -13,6 +13,6 @@ export class JurnalService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get<Jurnal[]>(Api.JURNAL_URL);
+    return this.http.get<Jurnal[]>(Api.JOURNAL_URL);
   }
 }
