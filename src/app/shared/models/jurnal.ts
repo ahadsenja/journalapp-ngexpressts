@@ -1,6 +1,6 @@
 export class Jurnal {
- id: number = 0;
- name: string = '';
- description: string = '';
- userId: number = 0;
+  id: number = 0;
+  name: string = '';
+  description: string = '';
+  user_id: number = 0;
 }
