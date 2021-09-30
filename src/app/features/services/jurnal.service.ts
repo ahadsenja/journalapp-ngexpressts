@@ -15,4 +15,8 @@ export class JurnalService {
   getAll(): Observable<any> {
     return this.http.get<Jurnal[]>(Api.JOURNAL_URL);
   }
+
+  create(jurnal: Jurnal): Observable<Jurnal> {
+    return this.http.post<Jurnal>(Api.JOURNAL_URL, jurnal);
+  }
 }
