@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
+  { path: 'jurnal/:id/:name', component: JurnalComponent, canActivate: [AuthGuard] },
   { path: 'jurnal', component: JurnalComponent, canActivate: [AuthGuard] },
   { path: 'jurnal/create', component: JurnalCreateComponent, canActivate: [AuthGuard] },
 
