@@ -9,6 +9,7 @@ import {
   faSort,
   faPrint
 } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
 
 import { Transaction } from 'src/app/shared/models/transaction';
 import { TransactionService } from '../../services/transaction.service';
@@ -37,8 +38,9 @@ export class TransactionComponent implements OnInit {
 
   constructor(
     private tsService: TransactionService,
-    private router: Router
-  ) { }
+    private router: Router,
+  ) {
+  }
 
   ngOnInit(): void {
     this.onGetTransactions();
@@ -46,11 +48,12 @@ export class TransactionComponent implements OnInit {
 
   onGetTransactions() {
     this.tsService.getAll().subscribe(transactions => {
-      this.transactions = transactions;
+      this.transactions = transactions.data;
+      console.log(this.transactions);
 
-      for (let i = 0; i < transactions.length; i++) {
-        let debit = transactions[i].debit;
-        let credit = transactions[i].credit;
+      for (let i = 0; i < transactions.data.length; i++) {
+        let debit = transactions.data[i].debit;
+        let credit = transactions.data[i].credit;
 
         this.balance = (this.balance + (debit - credit));
         this.transactions[i].balance = this.balance;
