@@ -12,7 +12,9 @@ export class JurnalComponent implements OnInit {
 
   jurnals: Jurnal[] = [];
 
-  constructor(private jurnalService: JurnalService) { }
+  constructor(
+    private jurnalService: JurnalService
+  ) { }
 
   ngOnInit(): void {
     this.onGetJurnals();
@@ -20,8 +22,8 @@ export class JurnalComponent implements OnInit {
 
   onGetJurnals() {
     this.jurnalService.getAll().subscribe(jurnals => {
-      this.jurnals = jurnals;
-      console.log(jurnals);
+      this.jurnals = jurnals.data;
+      console.log(jurnals.data);
     })
   }
 
