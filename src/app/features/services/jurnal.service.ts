@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Injectable, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Api } from 'src/app/core/constants/api';
@@ -19,4 +19,9 @@ export class JurnalService {
   create(jurnal: Jurnal): Observable<Jurnal> {
     return this.http.post<Jurnal>(Api.JOURNAL_URL, jurnal);
   }
+
+  getById(id: number): Observable<Jurnal> {
+    return this.http.get<Jurnal>(`${Api.JOURNAL_URL}/${id}`);
+  }
+
 }
