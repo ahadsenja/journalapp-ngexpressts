@@ -1,12 +1,13 @@
 <div class="data-jurnal">
- <div class="card w-25" *ngFor="let jurnal of jurnals">
-  <div class="card-body">
-   <h5 class="card-title">#{{ jurnal.id }}</h5>
-   <h5 class="card-title">{{ jurnal.name }}</h5>
-   <p class="card-text">{{ jurnal.description }}</p>
- 
-   <a id="btn-create" routerLink="/transaction/create">Mulai Buat</a>
+  <div class="card w-25" *ngFor="let jurnal of jurnals">
+    <div class="card-body">
+      <h5 class="card-title">#{{ jurnal.id }}</h5>
+      <h5 class="card-title">{{ jurnal.name }}</h5>
+      <p class="card-text">{{ jurnal.description }}</p>
+
+      <a id="btn-create" [routerLink]="['/transaction/create']"
+        [queryParams]="{ id: jurnal.id, name: jurnal.name }">Mulai
+        Buat</a>
+    </div>
   </div>
- </div>
 </div>
- 
