@@ -1,30 +1,36 @@
 <div class="form-update">
- <h5><strong>Update the existing transaction</strong></h5>
+  <h5><strong>Update the existing transaction</strong></h5>
 
- <form [formGroup]="formGroupValue" (ngSubmit)="onUpdateTransaction()">
-  <div class="form-group">
-   <label for="date">Date</label>
-   <input type="date" name="date" class="form-control" formControlName="date">
-  </div>
+  <form [formGroup]="updateTransaction" (ngSubmit)="onUpdateTransaction()">
+    <div class="form-group">
+      <label for="jurnal_id">Jurnal Id</label>
+      <input type="text" name="jurnal_id" class="form-control" formControlName="jurnal_id">
+    </div>
 
-  <div class="form-group">
-   <label for="description">Description</label>
-   <input type="text" name="description" class="form-control" formControlName="description" placeholder="Description">
-  </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" name="date" class="form-control" formControlName="date">
+    </div>
 
-  <div class="form-group">
-   <label for="debit">Debit</label>
-   <input type="text" name="debit" class="form-control" formControlName="debit" placeholder="Number">
-  </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" name="description" class="form-control" formControlName="description"
+        placeholder="Description">
+    </div>
 
-  <div class="form-group">
-   <label for="credit">Credit</label>
-   <input type="text" name="credit" class="form-control" formControlName="credit" placeholder="Number">
-  </div>
+    <div class="form-group">
+      <label for="debit">Debit</label>
+      <input type="text" name="debit" class="form-control" formControlName="debit" placeholder="Number">
+    </div>
 
-  <div class="btn-action">
-   <button type="submit" class="btn btn-success">Update</button>
-   <button type="submit" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
-  </div>
- </form>
+    <div class="form-group">
+      <label for="credit">Credit</label>
+      <input type="text" name="credit" class="form-control" formControlName="credit" placeholder="Number">
+    </div>
+
+    <div class="btn-action">
+      <button type="submit" class="btn btn-success">Update</button>
+      <button type="submit" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
 </div>
