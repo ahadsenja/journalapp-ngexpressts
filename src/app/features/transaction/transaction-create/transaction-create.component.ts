@@ -37,8 +37,6 @@ export class TransactionCreateComponent implements OnInit {
         id: params['id'],
         name: params['name']
       }
-
-      console.log('ini dari transaction create: \n' + 'ID: ' + this.jurnal.id + '\n' + 'Name: ' + this.jurnal.name)
     });
 
     this.formValueGroup = this.formBuilder.group({
