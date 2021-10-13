@@ -43,7 +43,7 @@
         <td>{{ trs.credit | number}}</td>
         <td>{{ trs.balance | number }}</td>
         <td>
-          <a class="btn btn-warning btn-sm" (click)="onSelectedTransaction(trs.id)">
+          <a class="btn btn-warning btn-sm" routerLink="/transaction/edit/{{trs.id}}">
             <fa-icon [icon]="pen"></fa-icon>
           </a>
           <span style="padding-right: 5px;"></span>
