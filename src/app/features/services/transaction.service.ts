@@ -32,4 +32,8 @@ export class TransactionService {
   getById(id: number): Observable<Transaction> {
     return this.http.get<Transaction>(`${Api.TRANSACTION_URL}/${id}`);
   }
+
+  getCurrentTransaction(id: number): Observable<any> {
+    return this.http.get<Transaction[]>(`${Api.TRANSACTION_URL}/${id}`);
+  }
 }
