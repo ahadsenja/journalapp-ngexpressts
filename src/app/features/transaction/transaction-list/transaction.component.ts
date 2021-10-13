@@ -49,7 +49,7 @@ export class TransactionComponent implements OnInit {
   onGetTransactions() {
     this.tsService.getAll().subscribe(transactions => {
       this.transactions = transactions.data;
-      console.log(this.transactions);
+      console.log(transactions.data);
 
       for (let i = 0; i < transactions.data.length; i++) {
         let debit = transactions.data[i].debit;
