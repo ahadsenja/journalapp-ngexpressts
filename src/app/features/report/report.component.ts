@@ -30,11 +30,11 @@ export class ReportComponent implements OnInit {
 
   onGetTransactions() {
     this.tsService.getAll().subscribe(transactions => {
-      this.transactions = transactions;
+      this.transactions = transactions.data;
 
-      for (let i = 0; i < transactions.length; i++) {
-        let debit = transactions[i].debit;
-        let credit = transactions[i].credit;
+      for (let i = 0; i < transactions.data.length; i++) {
+        let debit = transactions.data[i].debit;
+        let credit = transactions.data[i].credit;
 
         this.balance = (this.balance + (debit - credit));
         this.transactions[i].balance = this.balance;
