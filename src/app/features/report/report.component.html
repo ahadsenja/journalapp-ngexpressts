@@ -31,7 +31,7 @@
       <tbody>
         <tr *ngFor="let trs of transactions">
           <td>{{trs.id}}</td>
-          <td>{{trs.date}}</td>
+          <td>{{trs.date | date}}</td>
           <td>{{trs.description}}</td>
           <td>{{trs.debit | number}}</td>
           <td>{{trs.credit | number}}</td>
