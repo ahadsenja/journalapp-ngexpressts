@@ -2,7 +2,7 @@
   <h5><strong>Update the existing transaction</strong></h5>
 
   <form [formGroup]="updateTransaction" (ngSubmit)="onUpdateTransaction()">
-    <div class="form-group">
+    <div class="form-group" hidden="true">
       <label for="jurnal_id">Jurnal Id</label>
       <input type="text" name="jurnal_id" class="form-control" formControlName="jurnal_id">
     </div>
