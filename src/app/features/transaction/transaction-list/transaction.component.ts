@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { tap, map } from 'rxjs/operators';
+import { of } from 'rxjs'
 
 import {
   faTrashAlt,
@@ -9,7 +11,7 @@ import {
   faSort,
   faPrint
 } from '@fortawesome/free-solid-svg-icons';
-import { Subscription } from 'rxjs';
+import { pipe, Subscription } from 'rxjs';
 
 import { Transaction } from 'src/app/shared/models/transaction';
 import { TransactionService } from '../../services/transaction.service';
